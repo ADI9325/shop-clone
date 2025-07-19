@@ -184,9 +184,8 @@ const Products = () => {
               <ProductList
                 products={products}
                 emptyMessage={searchTerm ? `No products found for "${searchTerm}"` : "No products found"}
-    
               />
-              
+
               {products.length > 0 && products.length % 20 === 0 && (
                 <div className="text-center mt-8">
                   <Button

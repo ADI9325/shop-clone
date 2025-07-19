@@ -84,7 +84,6 @@ const ProductFilter = ({
 
   return (
     <div className={className}>
-      {/* Mobile Filter Toggle */}
       <div className="lg:hidden mb-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -98,9 +97,7 @@ const ProductFilter = ({
         </button>
       </div>
 
-      {/* Filter Panel */}
       <div className={`bg-white rounded-lg shadow-md p-6 ${isOpen ? 'block' : 'hidden lg:block'}`}>
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold text-gray-900">Filters</h2>
           <button
@@ -112,7 +109,6 @@ const ProductFilter = ({
         </div>
 
         <div className="space-y-6">
-          {/* Sort By */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Sort By
@@ -131,7 +127,6 @@ const ProductFilter = ({
             </select>
           </div>
 
-          {/* Categories */}
           <FilterSection title="Categories" sectionKey="category">
             <div className="space-y-2">
               <label className="flex items-center">
@@ -161,7 +156,6 @@ const ProductFilter = ({
             </div>
           </FilterSection>
 
-          {/* Price Range */}
           <FilterSection title="Price Range" sectionKey="price">
             <div className="space-y-2">
               <label className="flex items-center">
@@ -192,7 +186,6 @@ const ProductFilter = ({
             </div>
           </FilterSection>
 
-          {/* Rating */}
           <FilterSection title="Customer Rating" sectionKey="rating">
             <div className="space-y-2">
               {[4, 3, 2, 1].map((rating) => (

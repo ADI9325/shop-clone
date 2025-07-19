@@ -98,7 +98,6 @@ const Checkout = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Header */}
       <div className="mb-8">
         <button
           onClick={() => navigate('/cart')}
@@ -112,9 +111,7 @@ const Checkout = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Checkout Form */}
           <div className="space-y-8">
-            {/* Shipping Information */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
               <div className="flex items-center mb-6">
                 <MapPin className="h-6 w-6 text-blue-600 mr-3" />
@@ -202,7 +199,6 @@ const Checkout = () => {
               </div>
             </div>
 
-            {/* Payment Information */}
             <div className="bg-white rounded-lg shadow-sm border p-6">
               <div className="flex items-center mb-6">
                 <CreditCard className="h-6 w-6 text-blue-600 mr-3" />
@@ -277,12 +273,10 @@ const Checkout = () => {
             </div>
           </div>
 
-          {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm border p-6 sticky top-4">
               <h2 className="text-xl font-semibold text-gray-900 mb-6">Order Summary</h2>
               
-              {/* Cart Items */}
               <div className="space-y-4 mb-6">
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex items-center space-x-3">
@@ -304,10 +298,8 @@ const Checkout = () => {
                 ))}
               </div>
 
-              {/* Totals */}
               <CartSummary showDetails={true} />
 
-              {/* Place Order Button */}
               <Button
                 type="submit"
                 variant="primary"
@@ -318,8 +310,6 @@ const Checkout = () => {
               >
                 {isProcessing ? 'Processing Order...' : `Place Order • ${api.helpers.formatPrice(getCartTotal())}`}
               </Button>
-
-              {/* Security Notice */}
               <div className="flex items-center justify-center mt-4 space-x-1 text-xs text-gray-500">
                 <Lock className="h-3 w-3" />
                 <span>Your payment information is encrypted and secure</span>

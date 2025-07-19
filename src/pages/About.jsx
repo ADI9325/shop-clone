@@ -1,10 +1,8 @@
-import React from 'react';
 import { Users, Target, Award, Heart } from 'lucide-react';
 
 const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">About ShopClone</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -13,7 +11,6 @@ const About = () => {
         </p>
       </div>
 
-      {/* Mission Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
@@ -49,7 +46,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Values Section */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -95,7 +91,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team Section */}
       <div className="bg-gray-50 rounded-2xl p-8 mb-16">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -128,7 +123,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Contact CTA */}
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">

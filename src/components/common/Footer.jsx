@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -6,8 +5,6 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-blue-400 mb-4">ShopClone</h3>
             <p className="text-gray-300 mb-4">
@@ -27,7 +24,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -39,7 +35,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Customer Service */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2">
@@ -51,7 +46,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
@@ -71,7 +65,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="text-center mb-6">
             <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
@@ -89,7 +82,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
             © 2024 ShopClone. All rights reserved.

@@ -17,7 +17,7 @@ const Login = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-    setError(''); // Clear error when user types
+    setError('');
   };
 
   const handleSubmit = async (e) => {
@@ -28,7 +28,6 @@ const Login = () => {
     try {
       const result = await api.combined.loginUser(formData);
       if (result.success) {
-        // Redirect to previous page or home
         const returnUrl = new URLSearchParams(window.location.search).get('returnUrl') || '/';
         window.location.href = returnUrl;
       }
@@ -62,8 +61,6 @@ const Login = () => {
             </a>
           </p>
         </div>
-
-        {/* Form */}
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-md text-sm">

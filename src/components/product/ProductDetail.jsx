@@ -96,10 +96,7 @@ const ProductDetail = ({ productId }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-        
-        {/* Product Images */}
         <div>
-          {/* Main Image */}
           <div className="mb-4">
             <img
               src={api.helpers.getImageUrl(product.images?.[selectedImage])}
@@ -108,7 +105,6 @@ const ProductDetail = ({ productId }) => {
             />
           </div>
           
-          {/* Thumbnail Images */}
           {product.images && product.images.length > 1 && (
             <div className="flex space-x-2 overflow-x-auto">
               {product.images.map((image, index) => (
@@ -130,21 +126,17 @@ const ProductDetail = ({ productId }) => {
           )}
         </div>
 
-        {/* Product Info */}
         <div>
-          {/* Category */}
           <div className="mb-2">
             <span className="text-sm text-blue-600 font-medium">
               {product.category?.name}
             </span>
           </div>
 
-          {/* Title */}
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             {product.title}
           </h1>
 
-          {/* Rating */}
           <div className="flex items-center mb-4">
             <div className="flex items-center">
               {[1, 2, 3, 4, 5].map((star) => (
@@ -159,7 +151,6 @@ const ProductDetail = ({ productId }) => {
             <span className="text-gray-600 ml-2">(4.0) • 123 reviews</span>
           </div>
 
-          {/* Price */}
           <div className="mb-6">
             <div className="flex items-center space-x-3">
               <span className="text-3xl font-bold text-gray-900">
@@ -178,13 +169,11 @@ const ProductDetail = ({ productId }) => {
             </div>
           </div>
 
-          {/* Description */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Description</h3>
             <p className="text-gray-600 leading-relaxed">{product.description}</p>
           </div>
 
-          {/* Quantity Selector */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Quantity
@@ -209,7 +198,6 @@ const ProductDetail = ({ productId }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex space-x-4 mb-6">
             <button
               onClick={handleAddToCart}
@@ -248,7 +236,6 @@ const ProductDetail = ({ productId }) => {
             </button>
           </div>
 
-          {/* Features */}
           <div className="border-t pt-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -268,7 +255,6 @@ const ProductDetail = ({ productId }) => {
         </div>
       </div>
 
-      {/* Related Products */}
       {relatedProducts.length > 0 && (
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Products</h2>

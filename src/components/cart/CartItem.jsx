@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Trash2, Plus, Minus, Heart } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
 import api from '../../services/api';
 
 const CartItem = ({ item, onUpdateQuantity, onRemove, onMoveToWishlist }) => {
@@ -46,7 +45,6 @@ const CartItem = ({ item, onUpdateQuantity, onRemove, onMoveToWishlist }) => {
   return (
     <div className={`bg-white rounded-lg shadow-sm border p-4 transition-opacity ${isRemoving ? 'opacity-50' : ''}`}>
       <div className="flex items-start space-x-4">
-        {/* Product Image */}
         <div className="flex-shrink-0">
           <img
             src={api.helpers.getImageUrl(item.images?.[0])}
@@ -55,7 +53,6 @@ const CartItem = ({ item, onUpdateQuantity, onRemove, onMoveToWishlist }) => {
           />
         </div>
 
-        {/* Product Details */}
         <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
             <div className="flex-1 pr-4">
@@ -79,7 +76,6 @@ const CartItem = ({ item, onUpdateQuantity, onRemove, onMoveToWishlist }) => {
               </div>
             </div>
 
-            {/* Item Total */}
             <div className="text-right">
               <p className="text-lg font-semibold text-gray-900">
                 {api.helpers.formatPrice(itemTotal)}
@@ -87,9 +83,7 @@ const CartItem = ({ item, onUpdateQuantity, onRemove, onMoveToWishlist }) => {
             </div>
           </div>
 
-          {/* Quantity Controls and Actions */}
           <div className="flex items-center justify-between mt-4">
-            {/* Quantity Controls */}
             <div className="flex items-center space-x-2">
               <span className="text-sm text-gray-600">Qty:</span>
               <div className="flex items-center border border-gray-300 rounded-md">
